@@ -93,16 +93,25 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 # 4
-# HQ9+
-# https://codeforces.com/problemset/problem/133/A
+# Kefa and First Steps
+# https://codeforces.com/problemset/problem/580/A
 # Input
-# The input will consist of a single line p which will give a program in HQ9+. String p will contain between 1 and 100 characters, inclusive. ASCII-code of each character of p will be between 33 (exclamation mark) and 126 (tilde), inclusive.
+# The first line contains integer n (1 ≤ n ≤ 105).
+# The second line contains n integers a1,  a2,  ...,  an (1 ≤ ai ≤ 109).
 # Output
-# Output "YES", if executing the program will produce any output, and "NO" otherwise.
+# Print a single integer — the length of the maximum non-decreasing subsegment of sequence a.
 
-# listPlayers = input()
-# if "H" in listPlayers or "Q" in listPlayers or "9" in listPlayers:
-#     print("YES")
-# else:
-#     print("NO")
+# cuantItems = int(input())
+# itemsList = list(map(int, input().split()))
+
+# maxSequenceCounter = 1
+# prevMax = 1
+# for idx in range(1, len(itemsList)):
+#     if itemsList[idx - 1] <= itemsList[idx]:
+#         maxSequenceCounter += 1
+#     else:
+#         maxSequenceCounter = 1
+#     if prevMax < maxSequenceCounter:
+#         prevMax = maxSequenceCounter
+# print(prevMax)
 # ---------------------------------------------------------------------------------------------------------------------
