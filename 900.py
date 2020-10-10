@@ -115,3 +115,116 @@
 #         prevMax = maxSequenceCounter
 # print(prevMax)
 # ---------------------------------------------------------------------------------------------------------------------
+
+# 5
+# Even Odds
+# https://codeforces.com/problemset/problem/318/A
+# Input
+# The only line of input contains integers n and k (1 ≤ k ≤ n ≤ 1012).
+# Please, do not use the %lld specifier to read or write 64-bit integers in C++. It is preferred to use the cin, cout streams or the %I64d specifier.
+# Output
+# Print the number that will stand at the position number k after Volodya's manipulations.
+
+# inputFromUser = list(map(int, input().split()))
+# maxNumber = inputFromUser[0]
+# n = inputFromUser[1]
+# number = 0
+# if maxNumber % 2 == 0:
+#     if n <= maxNumber//2:
+#         number = 2*n - 1
+#     else:
+#         number = 2*n - maxNumber
+# else:
+#     if n <= (maxNumber - (maxNumber // 2)):
+#         number = 2*n - 1
+#     else:
+#         number = 2*n - maxNumber - 1
+# print(number)
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# 6
+# Gravity Flip
+# https://codeforces.com/problemset/problem/405/A
+
+# counter = input()
+# cols = list(map(int, input().split(" ")))
+# cols.sort()
+# answer = str(cols[0])
+# for idx in range(1, len(cols)):
+#     answer += " " + str(cols[idx])
+# print(answer)
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# 7
+# userEntry = list(map(int, input().split()))
+# students = userEntry[0]
+# puzzels = userEntry[1]
+
+# puzzelsList = list(map(int, input().split()))
+# puzzelsList.sort()
+# times = puzzels - students + 1
+# smallerDif = -1
+# for time in range(times):
+#     actualDif = abs(puzzelsList[time] - puzzelsList[time + (students - 1)])
+
+#     if actualDif < smallerDif or smallerDif == -1:
+
+#         smallerDif = actualDif
+# print(smallerDif)
+# ---------------------------------------------------------------------------------------------------------------------
+# 8
+# Dubstep
+# https://codeforces.com/problemset/problem/208/A
+# Input
+# The input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters. It is guaranteed that before Vasya remixed the song, no word contained substring "WUB" in it; Vasya didn't change the word order. It is also guaranteed that initially the song had at least one word.
+# Output
+# Print the words of the initial song that Vasya used to make a dubsteb remix. Separate the words with a space.
+# userEntry = input().split("WUB")
+# original = ""
+# for word in userEntry:
+#     if word != "":
+#         if original == "":
+#             original = word
+#         else:
+#             original += " " + word
+# print(original)
+# ---------------------------------------------------------------------------------------------------------------------
+
+# 9
+# Multiply by 2, divide by 6
+# https://codeforces.com/problemset/problem/1374/B
+# Input
+# The first line of the input contains one integer 𝑡(1≤𝑡≤2⋅104) — the number of test cases. Then 𝑡test cases follow.
+# The only line of the test case contains one integer 𝑛(1≤𝑛≤109).
+# Output
+# For each test case, print the answer — the minimum number of moves needed to obtain 1 from 𝑛 if it's possible to do that or -1 if it's impossible to obtain 1 from 𝑛.
+
+# times = int(input())
+# answers = []
+# for time in range(times):
+#     currentNumber = int(input())
+#     if currentNumber == 1:
+#         answers.append(0)
+#     else:
+#         moves = 0
+#         while currentNumber != 2:
+#             if currentNumber / 6 == 1:
+#                 moves += 1
+#                 break
+#             elif currentNumber % 3 != 0:
+#                 moves = -1
+#                 break
+#             else:
+#                 if currentNumber % 6 == 0:
+#                     currentNumber = currentNumber / 6
+#                 else:
+#                     currentNumber = currentNumber * 2
+#             moves += 1
+#         if currentNumber == 2:
+#             moves = -1
+#         answers.append(moves)
+
+# for i in range(len(answers)):
+#     print(answers[i])
