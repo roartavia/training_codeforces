@@ -228,3 +228,192 @@
 
 # for i in range(len(answers)):
 #     print(answers[i])
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Game With Sticks
+# https://codeforces.com/problemset/problem/451/A
+# Input
+# The first line of input contains two space-separated integers, n and m (1 ≤ n, m ≤ 100).
+# Output
+# Print a single line containing "Akshat" or "Malvika" (without the quotes), depending on the winner of the game.
+
+# coordinates = list(map(int, input().split()))
+# x = coordinates[0]
+# y = coordinates[1]
+# turn = 0
+# while x != 0 and y != 0:
+#     turn += 1
+#     x -= 1
+#     y -= 1
+
+# if turn % 2 != 0:
+#     print("Akshat")
+# else:
+#     print("Malvika")
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Candies
+# https://codeforces.com/problemset/problem/1343/A
+
+# # Function to check if x is power of 2
+# def isPowerOfTwo(x):
+#     return (x and (not(x & (x - 1))))
+
+
+# times = int(input())
+# answers = []
+# for time in range(times):
+#     number = int(input())
+#     for i in range(1, number):
+#         if number % i == 0:
+#             x = i
+#             y = number//i + 1
+#             if isPowerOfTwo(y):
+#                 answers.append(i)
+#                 break
+# for answer in answers:
+#     print(answer)
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Vasya and Socks
+# https://codeforces.com/problemset/problem/460/A
+# Input
+# The single line contains two integers n and m (1 ≤ n ≤ 100; 2 ≤ m ≤ 100), separated by a space.
+# Output
+# Print a single integer — the answer to the problem.
+
+# inputs = list(map(int, input().split(" ")))
+# initialSocks = inputs[0]
+# shopDay = inputs[1]
+# # it has the intial with the obvious amount of socks it can have those days - we are missing the socks got in the other days
+# totalDays = initialSocks
+# prevCounter = 0
+# while totalDays//shopDay != prevCounter:
+#     if prevCounter == 0:
+#         prevCounter = totalDays//shopDay
+#         totalDays += prevCounter
+#     else:
+#         totalDays += 1
+#         prevCounter += 1
+# print(totalDays)
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Ilya and Bank Account
+# https://codeforces.com/problemset/problem/313/A
+# Input
+# The single line contains integer n (10 ≤ |n| ≤ 109) — the state of Ilya's bank account.
+# Output
+# In a single line print an integer — the maximum state of the bank account that Ilya can get.
+# bankAccountBalance = int(input())
+# bankAccountBalanceStr = str(bankAccountBalance)
+# if bankAccountBalance < 0:
+#     strLen = len(bankAccountBalanceStr) - 1
+#     if bankAccountBalanceStr[strLen] > bankAccountBalanceStr[strLen - 1]:
+#         bankAccountBalanceStr = bankAccountBalanceStr[:strLen]
+#     else:
+#         bankAccountBalanceStr = bankAccountBalanceStr[:strLen -
+#                                                       1] + bankAccountBalanceStr[strLen:]
+# print(int(bankAccountBalanceStr))
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Construct the String
+# https://codeforces.com/problemset/problem/1335/B
+
+# times = int(input())
+# answers = []
+# chars = "abcdefghijklmnopqrstuvwxyz"
+# for time in range(times):
+#     inputList = list(map(int, input().split()))
+#     n = inputList[0]  # length
+#     a = inputList[1]  # substring
+#     b = inputList[2]  # diferents
+#     stringFinalized = ""
+#     substring = chars[:b]
+#     while len(stringFinalized) < n:
+#         missingLetters = n - len(stringFinalized)
+#         if missingLetters > b:
+#             stringFinalized += substring
+#         else:
+#             stringFinalized += substring[:missingLetters]
+#     answers.append(stringFinalized)
+# for i in range(len(answers)):
+#     print(answers[i])
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Kana and Dragon Quest game
+# https://codeforces.com/problemset/problem/1337/B
+
+# times = int(input())
+# answers = []
+# for time in range(times):
+#     inputList = list(map(int, input().split()))
+#     life = inputList[0]
+#     voidHits = inputList[1]
+#     lightHits = inputList[2]
+
+#     while life > 0:
+#         if lightHits * 10 >= life:
+#             # it would be dead
+#             answers.append("YES")
+#             break
+#         if voidHits > 0:
+#             life = life//2 + 10
+#             voidHits -= 1
+#         else:
+#             answers.append("NO")
+#             break
+# for i in range(len(answers)):
+#     print(answers[i])
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Case of the Zeros and Ones
+# https://codeforces.com/problemset/problem/556/A
+# Input
+# First line of the input contains a single integer n (1 ≤ n ≤ 2·105), the length of the string that Andreid has.
+# The second line contains the string of length n consisting only from zeros and ones.
+# Output
+# Output the minimum length of the string that may remain after applying the described operations several times.
+
+# lenght = int(input())
+# strToevaluate = input()
+# ceros = 0
+# ones = 0
+# for i in range(lenght):
+#     if strToevaluate[i] == "1":
+#         ones += 1
+#     else:
+#         ceros += 1
+# print(abs(ceros-ones))
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Keyboard
+# https://codeforces.com/problemset/problem/474/A
+# direction = input()
+# strToCheck = input()
+# keyboard = "qwertyuiopasdfghjkl;zxcvbnm,./"
+# newStr = ""
+# newPosition = -1
+# if direction == "L":
+#     newPosition = 1
+
+
+# def find(c, str):
+#     for i in range(len(str)):
+#         if str[i] == c:
+#             return i
+
+
+# for i in range(len(strToCheck)):
+#     newStr += keyboard[find(strToCheck[i], keyboard) + newPosition]
+# print(newStr)
+# ---------------------------------------------------------------------------------------------------------------------
+
+# times = int(input())
+# answers = []
+# for time in range(times):
+#     rombos = int(input())
+#     answers.append(rombos)
+# for i in range(len(answers)):
+#     print(answers[i])
+# ---------------------------------------------------------------------------------------------------------------------
